@@ -1,0 +1,49 @@
+/* header adjust */
+body{
+    background-color:black;
+}
+.navbar{
+    padding:0%;
+}
+.container{
+    font-family: 'Pacifico', cursive;
+    background-color: black;
+    padding: 0%;
+    margin:0%;
+    line-height: 60px;
+    width: 100%;
+    max-width: 100%;
+}
+.navbar-brand{
+    color:RGB(212,175,55);
+    font-size: 38px;
+    text-align: center;
+    margin-left: 30px;
+}
+.nav-link {
+    color:RGB(212,175,55);
+    font-size:27px;
+}
+.navbar-nav .nav-link.active {
+    color:#FF1493;
+    font-size:27px;
+}
+.nav-item{
+    color:RGB(212,175,55);
+}
+.navbar-toggler-icon{
+    color:RGB(212,175,55);
+}
+
+.dropdown-toggle .show .nav-link{
+    color:#FF1493;
+}
+.navbar-nav .dropdown-menu{
+    background-color:black;
+}
+.dropdown-item{
+    color:RGB(212,175,55);
+}
+.navbar-nav .show>.nav-link{
+    color:	#F0E68C;
+}
