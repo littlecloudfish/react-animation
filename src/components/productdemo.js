@@ -9,13 +9,16 @@ function BasicExample() {
           <div>{ratio}</div>
         </Ratio>
       ))} */}
-      <Ratio aspectRatio='16x9'>
+      <Ratio aspectRatio='21x9'>
         <div>
             <ReactPlayer 
             url="SnapSave.io-360 Photo Booth Houston-(1080p).mp4"
-            height="95%" 
-            width="95%"
-            controls={true}
+            height="100%" 
+            width="100%"
+            controls={false}
+            loop={true}
+            playing={true}
+            muted={true}
             />
         </div>
       </Ratio>

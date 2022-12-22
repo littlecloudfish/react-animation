@@ -1,0 +1,82 @@
+// body {
+//     margin: 0;
+//     font-family: 'Roboto';
+  
+//     display: flex; // To center the carousel vertically in the viewport
+//     flex-direction: column;
+//     height: 100vh;
+//     justify-content: center;
+//   }
+  
+  // Carousel configuration parameters
+  $n: 8; // Number of images
+  $item-width: 900px; // Width of an image. In the Js version this value can be a percentage
+  $item-separation: 520px; // The space between the images. This will decrease the effective item width
+  $viewer-distance: 2380px;
+  
+  // Derived variables
+  $theta: 2 * 3.141592653589793 / $n;
+  $apothem: 482.842712474619px; // == $item-width / (2 * tan(PI / $n))
+  
+  .carousel {
+    padding: 25px;
+  
+    perspective: $viewer-distance;
+    overflow: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > * {
+      flex: 0 0 auto;
+    }
+    
+    figure {
+      margin: 0;
+      
+      width: $item-width;
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+      transform-origin: 50% 50% (-$apothem);
+      
+      img {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 $item-separation / 2;
+        
+        opacity: 0.98;
+        
+        &:not(:first-of-type) {
+          position: absolute;
+          left: 0;
+          top: 0;
+          transform-origin: 50% 50% (-$apothem);
+        }
+        
+        @for $i from 2 through $n {
+          &:nth-child(#{$i}) {
+            transform: rotateY(#{($i - 1) * $theta}rad);
+          }
+        }
+      }
+    }
+    
+    nav {
+      display: flex;
+      justify-content: center;
+      margin: 80px 5px 5px;
+      font-size: 30px;
+      button {
+        flex: 0 0 auto;
+        margin: 0 5px;
+        cursor: pointer;
+        
+        color: #333;
+        background: none;
+        border: 1px solid;
+        letter-spacing: 1px;
+        padding: 20px 50px;
+      }
+    }
+    
+  }

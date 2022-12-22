@@ -1,0 +1,23 @@
+.showlink{
+    text-decoration: none;
+    display: inline;
+    padding: 20px 20px;
+    font-size: pointer;
+}
+.hero{
+    height: 600px;
+    background-color: blueviolet;
+}
+
+.services{
+    height: 600px;
+    background-color: pink;
+}
+.Blog{
+    height: 600px;  
+    background-color: greenyellow;
+}
+.contact {
+    height: 600px;
+    background-color: cadetblue;
+}
